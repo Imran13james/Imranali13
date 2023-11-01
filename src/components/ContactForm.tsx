@@ -55,40 +55,40 @@ console.log()
     // };
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  // setLoader(true);
+  setLoader(true);
   
   const { name, email, message } = formData;
   
-//   if (name && email && message) {
-//     try {
-//       const response = await fetch(`${process.env.RESEND_KEY}`, {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
+  if (name && email && message) {
+    try {
+      const response = await fetch(`${process.env.RESEND_KEY}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         
-//         body: JSON.stringify(formData),
-//       });
-//       console.log(response)
-//       if (!response.ok) {
-//         throw new Error('Failed to send email');
-//       }
+        body: JSON.stringify(formData),
+      });
+      console.log(response)
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
       
-//       const result = await response.json();
+      const result = await response.json();
       
-//       if (result.status === 'ok') {
-//         toast.success('Thanks for your email!');
-//         setFormVisibility();
-//       } else {
-//         throw new Error('Email sending failed');
-//       }
-//     } catch (error) {
-//       console.error(error);
-//       toast.error('An error occurred while sending the email');
-//     } finally {
-//       setLoader(false);
-//     }
-//   }
+      if (result.status === 'ok') {
+        toast.success('Thanks for your email!');
+        setFormVisibility();
+      } else {
+        throw new Error('Email sending failed');
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('An error occurred while sending the email');
+    } finally {
+      setLoader(false);
+    }
+  }
 };
 
     return (

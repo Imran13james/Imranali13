@@ -10,6 +10,7 @@ import Spinner from './Spinner';
 interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = ({}) => {
+
     const { showForm, setFormVisibility } = useContact();
     const [loader, setLoader] = useState(false);
     const handleFormClick = (e: MouseEvent<HTMLFormElement>) => {
@@ -34,9 +35,9 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
         if (name && email && message) {
             const triggerEmail = async () => {
                 const response = await fetch(
-                    `${process.env.RESEND_KEY}`,
+                    `${process.env.NEXT_PUBLIC_EMAIL_ROUTE}`,
                     {
-                        method: 'POST',
+                        method: 'GET',
                         body: JSON.stringify(formData),
                     }
                 );

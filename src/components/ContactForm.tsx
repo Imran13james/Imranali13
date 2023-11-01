@@ -37,7 +37,7 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
                 const response = await fetch(
                     `${process.env.NEXT_PUBLIC_EMAIL_ROUTE}`,
                     {
-                        method: 'GET',
+                        method: 'POST',
                         body: JSON.stringify(formData),
                     }
                 );

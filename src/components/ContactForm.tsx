@@ -7,9 +7,7 @@ import { X } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import Spinner from './Spinner';
 
-import Image from 'next/image';
 interface ContactFormProps {}
-
 
 const ContactForm: FC<ContactFormProps> = ({}) => {
     const { showForm, setFormVisibility } = useContact();
@@ -18,7 +16,7 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
         // Prevent the click event from bubbling up to the outer div
         e.stopPropagation();
     };
-console.log()
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -29,68 +27,29 @@ console.log()
         setFormData({ ...formData, [name]: value });
     };
 
-    // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    //     setLoader(true);
-    //     e.preventDefault();
-    //     const { name, email, message } = formData;
-    //     if (name && email && message) {
-    //         const triggerEmail = async () => {
-    //             const response = await fetch(
-    //                await `${process.env.NEXT_PUBLIC_EMAIL_ROUTE}`,
-                    
-    //                 {
-    //                     method: 'POST',
-    //                     body: JSON.stringify(formData),
-    //                 }
-    //             );
-    //             setLoader(false);
-    //             const result = await response.json();
-    //             if (result.status == 'ok') {
-    //                 toast.success('Thanks for your email!');
-    //                 setFormVisibility();
-    //             }
-    //         };
-    //      triggerEmail();
-    //     }
-    // };
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setLoader(true);
-  
-  const { name, email, message } = formData;
-  
-  if (name && email && message) {
-    try {
-      const response = await fetch(`${process.env.RESEND_KEY}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        
-        body: JSON.stringify(formData),
-      });
-      console.log(response)
-      if (!response.ok) {
-        throw new Error('Failed to send email');
-      }
-      
-      const result = await response.json();
-      
-      if (result.status === 'ok') {
-        toast.success('Thanks for your email!');
-        setFormVisibility();
-      } else {
-        throw new Error('Email sending failed');
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error('An error occurred while sending the email');
-    } finally {
-      setLoader(false);
-    }
-  }
-};
-
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        setLoader(true);
+        e.preventDefault();
+        const { name, email, message } = formData;
+        if (name && email && message) {
+            const triggerEmail = async () => {
+                const response = await fetch(
+                    `${process.env.RESEND_KEY}`,
+                    {
+                        method: 'POST',
+                        body: JSON.stringify(formData),
+                    }
+                );
+                setLoader(false);
+                const result = await response.json();
+                if (result.status == 'ok') {
+                    toast.success('Thanks for your email!');
+                    setFormVisibility();
+                }
+            };
+            triggerEmail();
+        }
+    };
     return (
         <>
             {showForm && (
@@ -134,10 +93,6 @@ console.log()
                             {loader ? <Spinner /> : 'Submit'}
                         </Button>
                     </form>
-                    <section className="bg-blur flex items-center justify-center backdrop-filter backdrop-blur-sm bg-[rgba(0,0,0,0.9)] flex font-medium items-center justify-center h-screen" >
-
-
-</section>
                 </div>
             )}
         </>

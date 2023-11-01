@@ -84,7 +84,7 @@ const Menu: FC<MenuProps> = ({ }) => {
       </List>
       <List
         target="_blank"
-        link="______"
+        link="https://stackoverflow.com/users/22842200/imran-ali"
         effect="slideUp"
       >
         <Linkedin color="#0277b5" /> Linkedin

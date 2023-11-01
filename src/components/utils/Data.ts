@@ -38,7 +38,7 @@ export const projectCard: IProjectSectionCardData[] = [
   },
   {
     id: 2,
-    title: 'Spotify Clone',
+    title: 'Real time caht',
     techStack:
       'React Js, Node Js, MongoDb,Chkra Ui, Tailwind CSS,Express Js',
     imageUrl: 'R.jpeg',

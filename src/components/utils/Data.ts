@@ -89,7 +89,7 @@ export const moreProjects = [
     title: 'Snake Game',
     techStack: 'Next.js 13, Tailwind CSS, Typescript',
     icon: 'game',
-    href: 'https://snake-nwaliaez.vercel.app/',
+    href: 'https://voluble-bavarois-34a31e.netlify.app/',
   },
 ];
 

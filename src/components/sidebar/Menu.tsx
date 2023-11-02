@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import {
   Code,
   Contact,
@@ -24,6 +24,7 @@ import Router from 'next/router';
 interface MenuProps {}
 
 const Menu: FC<MenuProps> = ({ }) => {
+  const [showContactMe, setShowContactMe] = useState(false);
   const { showMenuVisibility } = useMenu();
   const { setFormVisibility } = useContact();
   const openHeroPage = () => {
@@ -39,19 +40,22 @@ const Menu: FC<MenuProps> = ({ }) => {
         <X className={`text-primary`} />
       </div>
       {/* List 1 */}
-      <List  effect="slideUp">
+      {/* <List  effect="slideUp">
         <Home /> Home
-      </List>
+      </List> */}
       <List  effect="slideUp">
-        <Flame /> About me
+  <span>
+        <Flame />  <button onClick={() => setShowContactMe(true)}/>
+      {showContactMe && <ContactMe />}
+      </span>
       </List>
       <List effect="slideUp" >
-  <Contact onClick={setFormVisibility} /> Contact Me 
+        <span onClick={setFormVisibility} style={{display:"block"}}>
+  <Contact  /> Contact Me </span>
 </List>
-      <List effect="slideUp">
-        <Highlighter onClick={setFormVisibility} />  Hire me
+      <List effect="slideUp"><span onClick={setFormVisibility}>
+        <Highlighter  />  Hire me </span>
       </List>
-
       {/* List 2 */}
       <div className="mt-5">Socials</div>
       <List

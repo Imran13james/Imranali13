@@ -1,27 +1,29 @@
-import React from 'react';
+
+
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, X } from 'lucide-react';
 import { InstagramIcon } from 'lucide-react';
 import { TwitterIcon } from 'lucide-react';
-import { useContact } from '../Provider';
-
 
 const ContactMe = () => {
-  const { showForm, setFormVisibility } = useContact();
+  const [showForm, setShowForm] = useState(false);
   return (
-    <section style={{ fontFamily: 'Montserrat' }} className="bg-[#071e34] flex font-medium items-center justify-center h-screen" >
-
-      <section className="w-64 mx-auto bg-[#20354b] rounded-2xl px-8 py-6 shadow-lg">
+    <>
+      <button onClick={() => setShowForm(true)}>About me</button>
+      {showForm && (
+        <section style={{ fontFamily: 'Montserrat' }} className="bg-[#071e34] flex font-medium items-center justify-center h-screen">
+          <section className="w-64 mx-auto bg-[#20354b] rounded-2xl px-8 py-6 shadow-lg" onClick={() => setShowForm(false)}>
           <div className="flex items-center justify-between">
               <span className="text-gray-400 text-sm">2d ago</span>
               <span className="text-emerald-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                </svg>
+                
+                  <X className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                </X>
               </span>
           </div>
           <div className="mt-6 w-fit mx-auto">
-              <Image src="/images/KRVME9180.JPG" className="rounded-full w-28 h-28" alt="profile picture" width={120} height={120} />
+              <Image src="/images/cat.png" className="rounded-full w-28 h-28" alt="profile picture" width={120} height={120} />
           </div>
 
           <div className="mt-8 ">
@@ -47,12 +49,12 @@ const ContactMe = () => {
     </a>
   </div>
 </div>
-
-
-
-      </section>
-    </section>
+          </section>
+        </section>
+      )}
+    </>
   );
 };
 
 export default ContactMe;
+

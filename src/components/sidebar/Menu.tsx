@@ -11,13 +11,9 @@ import {
   Layers,
   Linkedin,
   Scissors,
-  Share2,
-  Shirt,
-  ShoppingCart,
-  Ticket,
-  Video,
+
   X,
-  Youtube,
+
 } from 'lucide-react';
 import List from '../ui/List';
 import { useContact, useMenu } from '../Provider';
@@ -77,14 +73,14 @@ const Menu: FC<MenuProps> = ({ }) => {
       </List> */}
       <List
         target="_blank"
-        link=""
+        link="https://stackoverflow.com/users/22842200/imran-ali"
         effect="slideUp"
       >
         <Layers color="#f77f00" /> Stack overflow
       </List>
       <List
         target="_blank"
-        link="https://stackoverflow.com/users/22842200/imran-ali"
+        link="https://www.linkedin.com/in/imran-ali13?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
         effect="slideUp"
       >
         <Linkedin color="#0277b5" /> Linkedin
@@ -107,7 +103,7 @@ const Menu: FC<MenuProps> = ({ }) => {
                 <ShoppingCart /> eCommerce
             </List>
             <List
-                target="_blank"
+                target="_blank"Linkedin
                 link="https://github.com/"
                 effect="slideUp"
             >

@@ -34,7 +34,7 @@ export const projectCard: IProjectSectionCardData[] = [
     title: 'Login Form',
     techStack: 'React Js, Node Js, MongoDb,Chkra Ui, Tailwind CSS,Express Js',
     imageUrl: 'Login.jpg',
-    href: '',
+    href: 'https://github.com/Imran13james/Backebd',
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ export const projectCard: IProjectSectionCardData[] = [
     techStack:
       'React Js, Node Js, MongoDb,Chkra Ui, Tailwind CSS,Express Js',
     imageUrl: 'R.jpeg',
-    href: 'https://github.com/Imran13james/forpractise.git',
+    href: 'https://github.com/Imran13james/Realtimechat',
   },
   {
     id: 3,
@@ -87,7 +87,7 @@ export const moreProjects = [
   {
     id: 4,
     title: 'Snake Game',
-    techStack: 'Next.js 13, Tailwind CSS, Typescript',
+    techStack: 'Tailwind CSS, React js',
     icon: 'game',
     href: 'https://voluble-bavarois-34a31e.netlify.app/',
   },

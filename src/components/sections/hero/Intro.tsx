@@ -34,9 +34,9 @@ const Intro: FC<IntroProps> = ({}) => {
                     </div>
                 </div>
                 <div className="text-secondary text-sm mt-2 md:mt-0  max-w-[500px]">
-                    Hire me,myself Imran Ali, on an exciting coding
+                     Myself Imran Ali, on an exciting coding
                     journey! Together, we&apos;ll delve into a world of
-                    knowledge, i am Mern Stack Developer , i am skilled in the range of programming languages and platforms Like React and Node js let&apos;s build something extraordinary, one
+                    knowledge, i am Mern Stack Developer (especially the backend)  , i am skilled in the range of programming languages and platforms Like React and Node js let&apos;s (but i am always intersted to work with backend) build something extraordinary, one
                     line of code at a time!
                 </div>
             </div>

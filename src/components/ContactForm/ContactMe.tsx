@@ -10,7 +10,7 @@ const ContactMe = () => {
   const [showForm, setShowForm] = useState(false);
   return (
     <>
-      <button onClick={() => setShowForm(true)}>About me</button>
+      <button onClick={() => setShowForm(true)}> Imran</button>
       {showForm && (
         <section style={{ fontFamily: 'Montserrat' }} className="bg-[#071e34] flex font-medium items-center justify-center h-screen">
           <section className="w-64 mx-auto bg-[#20354b] rounded-2xl px-8 py-6 shadow-lg" onClick={() => setShowForm(false)}>

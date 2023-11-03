@@ -45,7 +45,7 @@ const Menu: FC<MenuProps> = ({ }) => {
       </List> */}
       <List  effect="slideUp">
   <span>
-        <Flame />  <button onClick={() => setShowContactMe(true)}/>
+        <Flame />  <button onClick={() => setShowContactMe(true)}>About   ,</button>
       {showContactMe && <ContactMe />}
       </span>
       </List>

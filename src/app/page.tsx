@@ -4,10 +4,10 @@ import MoreProjects from '@/components/sections/MoreProjects';
 import Hero from '@/components/sections/Hero';
 import ProjectCardSection from '@/components/sections/ProjectCardSection';
 import {
-  // backendCard,
-  // databaseCard,
+  backendCard,
+  databaseCard,
   // devopsCards,
-  // frontendCard,
+  frontendCard,
   moreProjects,
   otherCards,
   projectCard,
@@ -22,9 +22,10 @@ export default function Home() {
         <Hero />
         <ProjectCardSection title="Projects" data={projectCard} />
         <MoreProjects title="More projects" data={moreProjects} />
-
-        {/* <CardSection title="Web3" data={web3Cards} /> */}
-        <CardSection title="Others" data={otherCards} />
+        <CardSection title="Front End " data={frontendCard} />
+        <CardSection title="Backend " data={backendCard} />
+        <CardSection title="DataBase" data={databaseCard} />
+        <CardSection title="Others / Just Started" data={otherCards} />
       </div>
     </div>
   );

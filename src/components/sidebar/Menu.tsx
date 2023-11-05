@@ -10,7 +10,11 @@ import {
   Instagram,
   Layers,
   Linkedin,
+  LucideEye,
+  Projector,
   Scissors,
+
+  ScreenShare,
 
   X,
 
@@ -39,10 +43,11 @@ const Menu: FC<MenuProps> = ({ }) => {
       <div className="block lg:hidden p-5 z-10 text-primary absolute right-0 top-0 cursor-pointer text-2xl">
         <X className={`text-primary`} />
       </div>
-      {/* List 1 */}
-      {/* <List  effect="slideUp">
+      <span>
+      <List  effect="slideUp">
         <Home /> Home
-      </List> */}
+      </List>
+      </span>
       <List  effect="slideUp">
   <span>
         <Flame />  <button onClick={() => setShowContactMe(true)}>About   ,</button>
@@ -68,13 +73,13 @@ const Menu: FC<MenuProps> = ({ }) => {
       <List target="_blank" link="https://github.com/Imran13james" effect="slideUp">
         <Github color="#2a9d8f" /> Github
       </List>
-      {/* <List
+      <List
         target="_blank"
         link=""
         effect="slideUp"
       >
-        <Youtube color="#e63946" /> Youtube
-      </List> */}
+        <ScreenShare color="#e63946" /> Vercel
+      </List>
       <List
         target="_blank"
         link="https://stackoverflow.com/users/22842200/imran-ali"

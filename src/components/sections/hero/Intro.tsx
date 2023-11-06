@@ -11,7 +11,7 @@ const Intro: FC<IntroProps> = ({}) => {
             <div className="flex flex-1">
                <iframe
                     className="w-full aspect-video rounded-lg"
-                    src="https://www.youtube.com/embed/0lbzmZeS-BY?si=WAYd7-w0oV7O-p2V"
+                    src="https://www.youtube.com/embed/sW9npZVpiMI?si=3iZxDLE7_I83d23C"
                 ></iframe> 
                            
             </div>

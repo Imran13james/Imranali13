@@ -67,7 +67,7 @@ export const moreProjects = [
     title: 'Amazon Mini Project',
     techStack: 'Purs HTML and CSS',
     icon: 'shirt',
-    href: 'https://github.com/nwaliaez/ezClothing',
+    href: '',
   },
   // {
   //   id: 2,

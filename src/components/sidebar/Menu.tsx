@@ -75,10 +75,10 @@ const Menu: FC<MenuProps> = ({ }) => {
       </List>
       <List
         target="_blank"
-        link=""
+        link="https://vercel.com/imran-alis-projects"
         effect="slideUp"
       >
-        <ScreenShare color="#e63946" /> Vercel
+        <ScreenShare color="#e63946" /> Check Out My Work
       </List>
       <List
         target="_blank"

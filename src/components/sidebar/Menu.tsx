@@ -16,6 +16,8 @@ import {
 
   ScreenShare,
 
+  WholeWord,
+
   X,
 
 } from 'lucide-react';
@@ -44,22 +46,27 @@ const Menu: FC<MenuProps> = ({ }) => {
         <X className={`text-primary`} />
       </div>
       <span>
-      <List  effect="slideUp">
+      <List
+        link=""
+        effect="slideUp"
+      >
         <Home /> Home
       </List>
       </span>
-      <List  effect="slideUp">
-  <span>
-        <Flame />  <button onClick={() => setShowContactMe(true)}>About   ,</button>
-      {showContactMe && <ContactMe />}
-      </span>
+      <List
+        link="https://www.linkedin.com/in/imran-ali13/"
+        effect="slideUp"
+      >
+        <WholeWord /> About Me
       </List>
-      <List effect="slideUp" >
-        <span onClick={setFormVisibility} style={{display:"block"}}>
-  <Contact  /> Contact Me </span>
-</List>
-      <List effect="slideUp"><span onClick={setFormVisibility}>
-        <Highlighter  />  Hire me </span>
+      <List
+        link="https://www.linkedin.com/in/imran-ali13/"
+        effect="slideUp"
+      >
+        <Contact /> Contact
+      </List>
+      <List effect="slideUp">
+        <Highlighter  /> For Project scroll down
       </List>
       {/* List 2 */}
       <div className="mt-5">Socials</div>

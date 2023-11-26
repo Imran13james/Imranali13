@@ -6,11 +6,12 @@ import ProjectCardSection from '@/components/sections/ProjectCardSection';
 import {
   backendCard,
   databaseCard,
-  // devopsCards,
+  devopsCards,
   frontendCard,
   moreProjects,
   otherCards,
   projectCard,
+  whyihavegivepercentage,
 
 } from '@/components/utils/Data';
 
@@ -26,6 +27,9 @@ export default function Home() {
         <CardSection title="Backend " data={backendCard} />
         <CardSection title="DataBase" data={databaseCard} />
         <CardSection title="Others / Just Started" data={otherCards} />
+        <CardSection title='devopsCards' data={devopsCards}/>
+        <CardSection title='Reason of showing green and Percentage' data={whyihavegivepercentage}/>
+
       </div>
     </div>
   );

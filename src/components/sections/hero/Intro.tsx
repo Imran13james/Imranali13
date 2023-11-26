@@ -1,5 +1,5 @@
 import List from '@/components/ui/List';
-import { Eye, History, ThumbsUp } from 'lucide-react';
+import { Eye, Heart, HeartHandshake, History, ThumbsUp, Timer, TimerIcon } from 'lucide-react';
 import Image from 'next/image';
 import { FC } from 'react';
 
@@ -22,11 +22,11 @@ const Intro: FC<IntroProps> = ({}) => {
                     </div>
                     <div className="flex gap-4">
                         <List variant="info" sizes="xs">
-                            <Eye size={16} />
-                            Imran Ali
+                            <HeartHandshake size={16} />
+                            Back-End
                         </List>
                         <List variant="info" sizes="xs">
-                            <History size={16} /> 6 Month Exprience
+                            <Timer size={16} /> 6 Month Exprience
                         </List>
                         <List variant="info" sizes="xs">
                             <ThumbsUp size={16} /> Mern Stack Developer
@@ -34,10 +34,7 @@ const Intro: FC<IntroProps> = ({}) => {
                     </div>
                 </div>
                 <div className="text-secondary text-sm mt-2 md:mt-0  max-w-[500px]">
-                     Myself Imran Ali, on an exciting coding
-                    journey! Together, we&apos;ll delve into a world of
-                    knowledge, i am Mern Stack Developer (especially the backend)  , i am skilled in the range of programming languages and platforms Like React and Node js let&apos;s (but i am always intersted to work with backend) build something extraordinary, one
-                    line of code at a time!
+                The enthusiastic MERN Stack developer is inspired by backend projects and system design. Specializing in reaction, node .js, has a keen interest in developing strong backend solutions. Dedicated to mastering system design principles to create scalable and efficient applications. To find opportunities to contribute and master backend development and system design efforts.
                 </div>
             </div>
         </div>

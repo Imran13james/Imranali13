@@ -17,6 +17,7 @@ export interface ISectionCardData {
   snippetCount: number;
   progress: number;
   href?: string;
+  
 }
 
 export interface IProjectSectionCardData {
@@ -93,93 +94,87 @@ export const moreProjects = [
   },
 ];
 
+
 export const frontendCard: ISectionCardData[] = [
   {
     id: 1,
     title: 'HTML, CSS',
     src: '/tech/frontend/htmlcss.jpeg',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 90,
+    exp: 'want to know so i can intrect with front end developer',
+    snippetCount: 30,
+    progress: 30,
   },
   {
     id: 3,
     title: 'Javascript, Typescript',
     src: '/tech/frontend/jsts.jpeg',
-    exp: '1 day ago',
-    snippetCount: 1128,
+    exp: 'Eager to Resolve Challenges',
+    snippetCount: 85,
     progress: 85,
   },
   {
     id: 4,
     title: 'Reactjs',
     src: '/tech/frontend/reactjs.jpg',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 80,
+    exp: 'Want to Know about basics',
+    snippetCount: 35,
+    progress: 35,
   },
   {
     id: 5,
-    title: 'Nextjs 13',
+    title: 'Nextjs 14',
     src: '/tech/frontend/nextjs13.jpeg',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 20,
+    exp: 'Want to Know about basics',
+    snippetCount: 30,
+    progress: 30,
   },
 ];
 
 export const backendCard: ISectionCardData[] = [
+  
   {
     id: 1,
     title: 'NodeJs',
     src: '/tech/backend/nodejs.webp',
-    exp: '1 day ago',
-    snippetCount: 1128,
+    exp: 'Committed to Finding Solutions',
+    snippetCount: 90,
     progress: 90,
   },
   {
     id: 2,
     title: 'ExpressJs',
     src: '/tech/backend/express.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
+    exp: 'Enthusiastic about Problem-Solving',
+    snippetCount: 90,
     progress: 90,
   }
 ];
-
+100
 export const databaseCard: ISectionCardData[] = [
-  // {
-  //   id: 1,
-  //   title: 'MySQL',
-  //   src: '/tech/database/mysql.jpeg',
-  //   exp: '1 day ago',
-  //   snippetCount: 1128,
-  //   progress: 50,
-  // },
+  {
+    id: 1,
+    title: 'MySQL',
+    src: '/tech/database/mysql.jpeg',
+    exp: 'Not know much but as backend i will work on it',
+    snippetCount: 20,
+    progress: 20,
+  },
   {
     id: 2,
     title: 'MongoDB',
     src: '/tech/database/mongo.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 80,
-  },
-  {
-    id: 3,
-    title: 'Mongodb Shell',
-    src: '/tech/database/mongo.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
+    exp: 'Dedicated to Troubleshooting',
+    snippetCount: 90,
     progress: 90,
   },
-  // {
-  //   id: 4,
-  //   title: 'PostgreSQL',
-  //   src: '/tech/database/postgres.png',
-  //   exp: '1 day ago',
-  //   snippetCount: 1128,
-  //   progress: 70,
-  // },
+  {
+    id: 4,
+    title: 'PostgreSQL',
+    src: '/tech/database/postgres.png',
+    exp: 'Not know much but as backend i will work on it',
+    snippetCount: 5,
+    progress: 5,
+  },
   // {
   //   id: 5,
   //   title: 'Elastic Search',
@@ -195,42 +190,42 @@ export const devopsCards: ISectionCardData[] = [
     id: 1,
     title: 'Docker',
     src: '/tech/devops/docker.webp',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 80,
+    exp: 'Intensely Driven by Problem-Solving',
+    snippetCount: 90,
+    progress: 90,
   },
-  {
-    id: 2,
-    title: 'Kubernetes',
-    src: '/tech/devops/k8s.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 80,
-  },
+  // {
+  //   id: 2,
+  //   title: 'Kubernetes',
+  //   src: '/tech/devops/k8s.png',
+  //   exp: 'Ardent Pursuit of Solutions',
+  //   snippetCount: 1128,
+  //   progress: 80,
+  // },
   {
     id: 3,
     title: 'GIT',
     src: '/tech/devops/git.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 80,
-  },
-  {
-    id: 4,
-    title: 'Jenkins',
-    src: '/tech/devops/jenkins.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 70,
-  },
-  {
-    id: 5,
-    title: 'Terraform',
-    src: '/tech/devops/terraform.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
+    exp: 'Ardent Pursuit of Solutions',
+    snippetCount: 60,
     progress: 60,
   },
+  // {
+  //   id: 4,
+  //   title: 'Jenkins',
+  //   src: '/tech/devops/jenkins.png',
+  //   exp: '1 day ago',
+  //   snippetCount: 1128,
+  //   progress: 70,
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Terraform',
+  //   src: '/tech/devops/terraform.png',
+  //   exp: '1 day ago',
+  //   snippetCount: 1128,
+  //   progress: 60,
+  // },
 ];
 
 export const web3Cards: ISectionCardData[] = [
@@ -281,24 +276,34 @@ export const otherCards: ISectionCardData[] = [
     id: 1,
     title: 'REST API Using Node JS',
     src: '/tech/others/rest.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
+    exp: 'Forever Curious and Exploring',
+    snippetCount: 80,
     progress: 80,
   },
   {
     id: 2,
     title: 'NIGIX',
     src: '/tech/others/soap.jpg',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 0,
+    exp: 'Forever Curious and Exploring',
+    snippetCount: 70,
+    progress: 70,
   },
   {
     id: 3,
     title: 'GraphQl',
     src: '/tech/others/graphql.png',
-    exp: '1 day ago',
-    snippetCount: 1128,
-    progress: 0,
+    exp: 'Forever Curious and Exploring',
+    snippetCount: 75,
+    progress: 75,
   },
 ];
+export const whyihavegivepercentage: ISectionCardData[] = [
+  {
+    id: 1,
+    title: 'The Reason Behind Green and Percentage ',
+    src: '/tech/frontend/backgrou.jpeg',
+    exp: 'I am displaying my passion through the color green, indicating my fervor for work and learning. It signifies the depth of my dedication.',
+    snippetCount: 0,
+    progress: 0,
+  },
+]

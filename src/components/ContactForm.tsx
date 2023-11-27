@@ -27,29 +27,41 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         setLoader(true);
         e.preventDefault();
         const { name, email, message } = formData;
         if (name && email && message) {
-            const triggerEmail = async () => {
+            try {
                 const response = await fetch(
-                    `${process.env.NEXT_PUBLIC_EMAIL_ROUTE}`,
+                    `https://shy-pear-python-gear.cyclic.app/messages/mail`,
                     {
                         method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
                         body: JSON.stringify(formData),
                     }
                 );
                 setLoader(false);
-                const result = await response.json();
-                if (result.status == 'ok') {
+    
+                if (response.ok) {
+                    // Assuming success if the response is okay
                     toast.success('Thanks for your email!');
                     setFormVisibility();
+                } else {
+                    throw new Error('Network response was not ok.');
                 }
-            };
-            triggerEmail();
+            } catch (error) {
+                console.error('Error:', error);
+                toast.error('An error occurred while submitting the form.');
+            }
+        } else {
+            toast.error('Please fill in all fields.');
+            setLoader(false);
         }
     };
+    
     return (
         <>
             {showForm && (

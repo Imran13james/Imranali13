@@ -54,7 +54,7 @@ const Menu: FC<MenuProps> = ({ }) => {
       </List>
       </span>
       <List
-        link="https://www.linkedin.com/in/imran-ali13/"
+        link="https://65a6874c7cb25c09c90952f7--jocular-basbousa-e89524.netlify.app/"
         effect="slideUp"
       >
         <WholeWord /> About Me
